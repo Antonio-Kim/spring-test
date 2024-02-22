@@ -1,3 +1,5 @@
+package com.antoniok;
+
 import com.antoniok.Country;
 import com.antoniok.Passenger;
 
