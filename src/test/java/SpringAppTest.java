@@ -1,14 +1,14 @@
 import com.antoniok.Passenger;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration("classpath:application-context.xml")
 public class SpringAppTest {
 
@@ -16,7 +16,7 @@ public class SpringAppTest {
     private Passenger passenger;
     private Passenger expectedPassenger;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         expectedPassenger = PassengerUtil.getExpectedPassenger();
     }
